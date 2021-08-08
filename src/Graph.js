@@ -33,11 +33,24 @@ function Graph(){
     <LineChart width={800} height={500} data={sequence}>
       <XAxis dataKey="name" />
       <YAxis />
-      <Tooltip />
+      <Tooltip content={<CustomTooltip />}/>
       <Line dot={false} dataKey="uv" stroke="#8884d8" />
     </LineChart>
     )
   }
+
+  const CustomTooltip = ({ active, payload, label }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="custom-tooltip">
+          <p className='iter'>{`Iteration: ${label}`}</p>
+          <p className='value'>{`Value: ${payload[0].value}`}</p>
+        </div>
+      );
+    }
+  
+    return null;
+  };
 
   const handleInput = e => {
     const re = /^[0-9\b]+$/;
