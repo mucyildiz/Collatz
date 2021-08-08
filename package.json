@@ -11,7 +11,8 @@
   },
   "scripts": {
     "start": "webpack serve",
-    "create": "webpack"
+    "create": "webpack",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "url": "https://github.com/mucyildiz/Collatz/issues"
   },
   "dependencies": {
+    "gh-pages": "^3.2.3",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "recharts": "^2.0.10"
