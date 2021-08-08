@@ -11,8 +11,8 @@
   },
   "scripts": {
     "start": "webpack serve",
-    "create": "webpack",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d build",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
     "react-dom": "^16.8.5",
     "recharts": "^2.0.10"
   },
-  "homepage": "https://github.com/mucyildiz/Collatz#readme",
+  "homepage": "https://mucyildiz.github.io/Collatz/",
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
