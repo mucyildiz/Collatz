@@ -30,11 +30,11 @@ function Graph(){
   const renderGraph = () => {
     const sequence = getCollatzSequence(number);
     return(
-    <LineChart width={800} height={400} data={sequence}>
+    <LineChart width={800} height={500} data={sequence}>
       <XAxis dataKey="name" />
       <YAxis />
       <Tooltip />
-      <Line dot={false} type="basis" dataKey="uv" stroke="#8884d8" />
+      <Line dot={false} dataKey="uv" stroke="#8884d8" />
     </LineChart>
     )
   }
