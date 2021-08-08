@@ -1,5 +1,5 @@
 {
-  "name": "Collatz",
+  "name": "collatz",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -25,7 +25,8 @@
   },
   "dependencies": {
     "react": "^16.8.5",
-    "react-dom": "^16.8.5"
+    "react-dom": "^16.8.5",
+    "recharts": "^2.0.10"
   },
   "homepage": "https://github.com/mucyildiz/Collatz#readme",
   "devDependencies": {
