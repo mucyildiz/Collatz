@@ -61,14 +61,21 @@ function Graph(){
 
   return (
     <div id='container'>
-      <div id='graph'>
-        {renderGraph()}
+      <div id='message'>
+        <h1>Collatz Conjecture</h1>
+        <p>The Collatz Conjecture, also referred to as the <b><i>3n+1 conjecture</i></b> is a mathematical <i>conjecture </i> 
+        (meaning mathematicians suspect it to be true but haven't been able to prove it yet) that is as follows:</p>
+        <li>Start with any positive integer <i>n</i>.</li>
+        <li>If n is odd, then multiply it by 3 and add 1.</li>
+        <li>Otherwise, divide n by 2.</li>
+        <p>Mathematicians hypothesize that following these rules will produce a sequence that always converges exactly to one.</p>
+        <p>Go on and try it for yourself in the input box below!</p>
       </div>
       <div id='input'>
         <input type='number' value={number} onChange={handleInput}/>
       </div>
-      <div id='message'>
-        Remember the number must be greater than 0.
+      <div id='graph'>
+        {renderGraph()}
       </div>
     </div>
   )
