@@ -11,4 +11,4 @@ f(16) = 16 / 2 = 8 <br/>
 f(8) = 4 / 2 = 2 <br/>
 f(2) = 2 / 1 = **1** <br/>
 
-Check out the app and play around with more numbers [here](https://github.com/mucyildiz/Collatz).
+Check out the app and play around with more numbers [here](https://mucyildiz.github.io/Collatz/).
