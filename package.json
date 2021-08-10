@@ -28,6 +28,7 @@
     "gh-pages": "^3.2.3",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
+    "react-responsive": "*",
     "recharts": "^2.0.10"
   },
   "homepage": "https://mucyildiz.github.io/Collatz/",
