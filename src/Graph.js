@@ -1,10 +1,12 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { LineChart, Line, Tooltip, XAxis, YAxis } from 'recharts';
+import { useMediaQuery } from 'react-responsive'
 import './Graph.css';
 
 function Graph(){
   const [number, setNumber] = useState(7);
+  const isTabletOrMobile = useMediaQuery({ maxWidth: 1224 })
 
   useEffect(() => {
     getCollatzSequence(number, 0);
@@ -30,7 +32,7 @@ function Graph(){
   const renderGraph = () => {
     const sequence = getCollatzSequence(number);
     return(
-    <LineChart width={800} height={500} data={sequence}>
+    <LineChart width={isTabletOrMobile ? 370 : 800} height={isTabletOrMobile ? 300 : 600} data={sequence}>
       <XAxis dataKey="name" />
       <YAxis />
       <Tooltip content={<CustomTooltip />}/>
