@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "webpack serve",
-    "deploy": "gh-pages -d dist",
+    "deploy": "npm run build && gh-pages -d dist",
     "build": "webpack"
   },
   "repository": {
