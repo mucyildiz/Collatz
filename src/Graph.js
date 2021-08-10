@@ -32,7 +32,7 @@ function Graph(){
   const renderGraph = () => {
     const sequence = getCollatzSequence(number);
     return(
-    <LineChart width={isTabletOrMobile ? 370 : 800} height={isTabletOrMobile ? 300 : 600} data={sequence}>
+    <LineChart width={isTabletOrMobile ? 320 : 800} height={isTabletOrMobile ? 300 : 600} data={sequence}>
       <XAxis dataKey="name" />
       <YAxis />
       <Tooltip content={<CustomTooltip />}/>
