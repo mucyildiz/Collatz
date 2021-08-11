@@ -9,28 +9,30 @@ function Graph(){
   const isTabletOrMobile = useMediaQuery({ maxWidth: 1224 })
 
   useEffect(() => {
-    getCollatzSequence(number, 0);
+    collatz(number, 0);
   }, []);
 
-  const getCollatzSequence = (n) => {
-    const data = [];
-    data.push({ name: 0, uv: n });
-    let i = n;
-    let count = 0;
-    while (i > 1) {
-      count++;
-      if (i % 2 === 0) {
-        i = i / 2;
-      } else {
-        i = i * 3 + 1;
-      }
-      data.push({name: count.toString(), uv: i});
+  const collatz = n => {
+    if(n === '') {
+      return;
     }
-    return data;
+  
+    let sequence = [];
+    const collatzHelper = (n, count) => {
+      sequence.push({ name: count.toString(), uv: n });
+      // if we don't reach this break case then we have proven the collatz conjecture false which would be hilarious
+      if(n === 1) {
+        return;
+      }
+      n % 2 == 0 ? collatzHelper(n/2, count+1) : collatzHelper(n * 3 + 1, count+1);
+    }
+    collatzHelper(n, 0);
+
+    return sequence;
   }
 
   const renderGraph = () => {
-    const sequence = getCollatzSequence(number);
+    const sequence = collatz(number);
     return(
     <LineChart width={isTabletOrMobile ? 320 : 800} height={isTabletOrMobile ? 300 : 600} data={sequence}>
       <XAxis dataKey="name" />
