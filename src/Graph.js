@@ -20,11 +20,10 @@ function Graph(){
     let sequence = [];
     const collatzHelper = (n, count) => {
       sequence.push({ name: count.toString(), uv: n });
-      // if we don't reach this break case then we have proven the collatz conjecture false which would be hilarious
       if(n === 1) {
         return;
       }
-      n % 2 == 0 ? collatzHelper(n/2, count+1) : collatzHelper(n * 3 + 1, count+1);
+      n % 2 === 0 ? collatzHelper(n/2, count+1) : collatzHelper(n * 3 + 1, count+1);
     }
     collatzHelper(n, 0);
 
