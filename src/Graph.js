@@ -23,7 +23,8 @@ function Graph(){
       if(n === 1) {
         return;
       }
-      n % 2 === 0 ? collatzHelper(n/2, count+1) : collatzHelper(n * 3 + 1, count+1);
+      const nextNum = n % 2 === 0 ? n/2 : 3*n + 1;
+      collatzHelper(nextNum, ++count);
     }
     collatzHelper(n, 0);
 
